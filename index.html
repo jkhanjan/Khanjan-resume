@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=resume.pdf" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resume</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .pdf-frame {
+        width: 100%;
+        height: 100vh;
+        border: 0;
+      }
+      .fallback {
+        padding: 1rem;
+        font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <p>If you are not redirected, <a href="resume.pdf">click here</a>.</p>
+    <!-- Embed the PDF so browsers that support it will show it inline. -->
+    <iframe class="pdf-frame" src="Khanjan-jha-resume.pdf">
+      <!-- Fallback content for browsers that don't render PDFs in an iframe -->
+      <div class="fallback">
+        This browser cannot display PDFs inline. You can
+        <a href="Khanjan-jha-resume.pdf" download>download the resume (PDF)</a>
+        to view it.
+      </div>
+    </iframe>
   </body>
 </html>
